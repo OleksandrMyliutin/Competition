@@ -1,5 +1,7 @@
 package org.example;
 
+import java.math.BigDecimal;
+
 public class Main {
     public static void main(String[] args) {
         double[][] testMatrix = {
@@ -14,5 +16,6 @@ public class Main {
             }
             System.out.print('\n');
         }
+        System.out.println(HungarianMethod.findMinRowElement(testMatrix[0]));
     }
 }
