@@ -2,7 +2,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        int[][] testMatrix = {
+        double[][] testMatrix = {
                 {6, 3, 8, 5},
                 {9, 7, 2, 4},
                 {5, 8, 3, 7}};
