@@ -2,7 +2,17 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        System.out.println("Hello world! Its Mykyta.");
+        int[][] testMatrix = {
+                {6, 3, 8, 5},
+                {9, 7, 2, 4},
+                {5, 8, 3, 7}};
+        for (int i = 0; i < testMatrix.length; i++)
+        {
+            for(int j = 0; j < testMatrix[i].length; j++)
+            {
+                System.out.print(testMatrix[i][j] + "\t");
+            }
+            System.out.print('\n');
+        }
     }
 }
