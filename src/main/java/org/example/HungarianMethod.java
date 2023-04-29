@@ -16,8 +16,13 @@ public class HungarianMethod {
         return minCost;
     }
 
-    private static double findMinRowElement(double[] row){
+    public static double findMinRowElement(double[] row){
         double minElement = row[0];
+        for (int i = 0; i < row.length; i++) {
+            if (minElement > row[i]){
+                minElement = row[i];
+            }
+        }
         return minElement;
     }
     private static double findMinColElement(double[] col){
