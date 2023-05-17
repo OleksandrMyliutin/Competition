@@ -1,0 +1,84 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d008b32f-8536-45ff-85ba-b8024bebc26e\" name=\"Changes\" comment=\"Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class.\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/module-info.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/firstjavafxproject/HelloController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/firstjavafxproject/MatrixGridExample.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/com/example/firstjavafxproject/hello-view.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/HungarianMethod.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/HungarianMethod.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"f4358c0d-088e-4644-b268-d438b9af44f3\" />\r\n        <option name=\"url\" value=\"https://github.com/Shubertov/Competition.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/src/main/java/org/example/Main.java\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OpRF9N4OeZS5XyjC4hKlZjFeSH\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,\r\n    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;338&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/For_job/study/kurse/Eight_leson/MavenDemo/pom.xml&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"ExtractSuperBase.RECENT_KEYS\">\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"org.example.Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.Main\" />\r\n      <module name=\"MavenDemo\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.example.GUI.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.org.example.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d008b32f-8536-45ff-85ba-b8024bebc26e\" name=\"Changes\" comment=\"\" />\r\n      <created>1682255127475</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1682255127475</updated>\r\n      <workItem from=\"1682255128510\" duration=\"253000\" />\r\n      <workItem from=\"1682255433698\" duration=\"24000\" />\r\n      <workItem from=\"1682255468738\" duration=\"1282000\" />\r\n      <workItem from=\"1682268678293\" duration=\"34000\" />\r\n      <workItem from=\"1682268721979\" duration=\"634000\" />\r\n      <workItem from=\"1682269742767\" duration=\"63000\" />\r\n      <workItem from=\"1682329182867\" duration=\"1193000\" />\r\n      <workItem from=\"1682337001082\" duration=\"3000\" />\r\n      <workItem from=\"1682363699023\" duration=\"599000\" />\r\n      <workItem from=\"1682373741925\" duration=\"114000\" />\r\n      <workItem from=\"1682373865190\" duration=\"3000\" />\r\n      <workItem from=\"1682407636366\" duration=\"30000\" />\r\n      <workItem from=\"1682776305437\" duration=\"4639000\" />\r\n      <workItem from=\"1682794011753\" duration=\"80000\" />\r\n      <workItem from=\"1683914446132\" duration=\"6540000\" />\r\n      <workItem from=\"1684073351735\" duration=\"18000\" />\r\n      <workItem from=\"1684082744538\" duration=\"8631000\" />\r\n      <workItem from=\"1684143106339\" duration=\"10464000\" />\r\n      <workItem from=\"1684230324568\" duration=\"216000\" />\r\n      <workItem from=\"1684238636387\" duration=\"932000\" />\r\n      <workItem from=\"1684245935223\" duration=\"59000\" />\r\n      <workItem from=\"1684246020088\" duration=\"44000\" />\r\n      <workItem from=\"1684246084849\" duration=\"235000\" />\r\n      <workItem from=\"1684246696948\" duration=\"180000\" />\r\n      <workItem from=\"1684254559789\" duration=\"303000\" />\r\n      <workItem from=\"1684257045405\" duration=\"8000\" />\r\n      <workItem from=\"1684257103177\" duration=\"2456000\" />\r\n      <workItem from=\"1684270123827\" duration=\"552000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First commit\">\r\n      <created>1682255876235</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1682255876235</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"First commit\">\r\n      <created>1682256304758</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1682256304758</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Second commit. (Shuber)&#10;Created HungarianMethod class.\">\r\n      <created>1682778484283</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1682778484283</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class.\">\r\n      <created>1682781348092</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1682781348092</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"HEAD\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"First commit\" />\r\n    <MESSAGE value=\"Second commit. (Shuber)&#10;Created HungarianMethod class.\" />\r\n    <MESSAGE value=\"Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class.\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 07d934117cbaed1d4ada15407d56f15bc1a9c7ed)
++++ b/.idea/workspace.xml	(date 1684312936868)
+@@ -4,16 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d008b32f-8536-45ff-85ba-b8024bebc26e" name="Changes" comment="Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class.">
+-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/firstjavafxproject/HelloController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/firstjavafxproject/MatrixGridExample.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/firstjavafxproject/hello-view.fxml" afterDir="false" />
++    <list default="true" id="d008b32f-8536-45ff-85ba-b8024bebc26e" name="Changes" comment="Fourth commit. (Shubert)&#10;Created GUI. And it works! Update maven and all your files.">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HungarianMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HungarianMethod.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -30,11 +22,16 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory">{
+-  &quot;lastFilter&quot;: {
+-    &quot;state&quot;: &quot;OPEN&quot;
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "history": [
++    {
++      "state": "CLOSED"
++    }
++  ],
++  "lastFilter": {
++    "state": "CLOSED"
+   }
+-}</component>
++}]]></component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+       <UrlAndAccount>
+@@ -133,6 +130,8 @@
+       <workItem from="1684257045405" duration="8000" />
+       <workItem from="1684257103177" duration="2456000" />
+       <workItem from="1684270123827" duration="552000" />
++      <workItem from="1684310491814" duration="806000" />
++      <workItem from="1684311314468" duration="654000" />
+     </task>
+     <task id="LOCAL-00001" summary="First commit">
+       <created>1682255876235</created>
+@@ -162,7 +161,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1682781348092</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="Fourth commit. (Shubert)&#10;Created GUI. And it works! Update maven and all your files.">
++      <created>1684310739524</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1684310739524</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -195,6 +201,7 @@
+     <MESSAGE value="First commit" />
+     <MESSAGE value="Second commit. (Shuber)&#10;Created HungarianMethod class." />
+     <MESSAGE value="Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class." />
+-    <option name="LAST_COMMIT_MESSAGE" value="Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class." />
++    <MESSAGE value="Fourth commit. (Shubert)&#10;Created GUI. And it works! Update maven and all your files." />
++    <option name="LAST_COMMIT_MESSAGE" value="Fourth commit. (Shubert)&#10;Created GUI. And it works! Update maven and all your files." />
+   </component>
+ </project>
+\ No newline at end of file
