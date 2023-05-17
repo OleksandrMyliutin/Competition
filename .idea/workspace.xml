@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d008b32f-8536-45ff-85ba-b8024bebc26e" name="Changes" comment="Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class.">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/firstjavafxproject/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/firstjavafxproject/MatrixGridExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/firstjavafxproject/hello-view.fxml" afterDir="false" />
+    <list default="true" id="d008b32f-8536-45ff-85ba-b8024bebc26e" name="Changes" comment="First commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HungarianMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HungarianMethod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,20 +20,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="f4358c0d-088e-4644-b268-d438b9af44f3" />
-        <option name="url" value="https://github.com/Shubertov/Competition.git" />
-      </UrlAndAccount>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/org/example/Main.java" root0="FORCE_HIGHLIGHTING" />
@@ -56,9 +41,6 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;338&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
@@ -68,15 +50,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="org.example.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -117,22 +94,7 @@
       <workItem from="1682373741925" duration="114000" />
       <workItem from="1682373865190" duration="3000" />
       <workItem from="1682407636366" duration="30000" />
-      <workItem from="1682776305437" duration="4639000" />
-      <workItem from="1682794011753" duration="80000" />
-      <workItem from="1683914446132" duration="6540000" />
-      <workItem from="1684073351735" duration="18000" />
-      <workItem from="1684082744538" duration="8631000" />
-      <workItem from="1684143106339" duration="10464000" />
-      <workItem from="1684230324568" duration="216000" />
-      <workItem from="1684238636387" duration="932000" />
-      <workItem from="1684245935223" duration="59000" />
-      <workItem from="1684246020088" duration="44000" />
-      <workItem from="1684246084849" duration="235000" />
-      <workItem from="1684246696948" duration="180000" />
-      <workItem from="1684254559789" duration="303000" />
-      <workItem from="1684257045405" duration="8000" />
-      <workItem from="1684257103177" duration="2456000" />
-      <workItem from="1684270123827" duration="552000" />
+      <workItem from="1682776305437" duration="1822000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1682255876235</created>
@@ -148,21 +110,7 @@
       <option name="project" value="LOCAL" />
       <updated>1682256304758</updated>
     </task>
-    <task id="LOCAL-00003" summary="Second commit. (Shuber)&#10;Created HungarianMethod class.">
-      <created>1682778484283</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1682778484283</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class.">
-      <created>1682781348092</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1682781348092</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,8 +141,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <MESSAGE value="Second commit. (Shuber)&#10;Created HungarianMethod class." />
-    <MESSAGE value="Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Third commit. (Shubert)&#10;Created findMinRowElement in HungarianMethod class." />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
   </component>
 </project>
