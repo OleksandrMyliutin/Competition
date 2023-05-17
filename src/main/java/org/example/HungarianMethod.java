@@ -5,7 +5,7 @@ import java.util.List;
 
 public class HungarianMethod {
 
-    public static double calculate(double[][] matrix){
+    static double calculate(double[][] matrix){
         double minCost = 0;
         double[][] startMatrix = copy2DArray(matrix);
         double[][] tempMatrix = copy2DArray(matrix);
