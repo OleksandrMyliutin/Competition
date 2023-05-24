@@ -84,6 +84,7 @@ public class MatrixGridExample extends Application {
         GridPane.setColumnSpan(resultLabel, size + 1);
 
         RadioButton radioButton1 = new RadioButton("Minimal cost");
+        radioButton1.fire();
         RadioButton radioButton2 = new RadioButton("Maximal benefit");
 
         ToggleGroup toggleGroup = new ToggleGroup();
@@ -105,7 +106,6 @@ public class MatrixGridExample extends Application {
 
     private void processMatrix(int size) {
         double[][] matrix = new double[size][size];
-
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 String input = textFields[i][j].getText();
@@ -117,16 +117,16 @@ public class MatrixGridExample extends Application {
                 }
             }
         }
-
+        double[] cords = HungarianMethod.calculateCosts(matrix, isMaximalBenefit);
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < size; i++) {
             String rowName = rowNameFields[i].getText();
             result.append(rowName).append(": ");
-            result.append(Arrays.deepToString(HungarianMethod.cords(matrix))).append(" ");
+            result.append(cords[i]);
             result.append("\n");
         }
 
-        double minimalOrMaximal = HungarianMethod.calculate(matrix, isMaximalBenefit);
+        double minimalOrMaximal = HungarianMethod.sumZeroElements(cords);
 
         result.append("cost of hungarian method: ").append(minimalOrMaximal);
 
