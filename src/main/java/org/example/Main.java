@@ -22,6 +22,6 @@ public class Main {
             }
             System.out.print('\n');
         }
-        System.out.println("Minimal cost of hungarian method: " + HungarianMethod.calculate(testMatrix));
+//        System.out.println("Minimal cost of hungarian method: " + HungarianMethod.calculate(testMatrix));
     }
 }

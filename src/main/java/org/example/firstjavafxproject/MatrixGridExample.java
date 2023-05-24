@@ -5,15 +5,20 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.example.HungarianMethod;
+
+import java.util.Arrays;
 
 public class MatrixGridExample extends Application {
 
     private TextField[][] textFields;
     private TextField[] rowNameFields;
+    private boolean isMaximalBenefit; // Прапорець для визначення обраного режиму (true - Maximal benefit, false - Minimal cost)
 
     @Override
     public void start(Stage primaryStage) {
@@ -22,7 +27,7 @@ public class MatrixGridExample extends Application {
         gridPane.setHgap(10);
         gridPane.setVgap(10);
 
-        Label sizeLabel = new Label("Enter matrix size:");
+        Label sizeLabel = new Label("Впишіть розмір поля для данних:");
         TextField sizeTextField = new TextField();
 
         Button createButton = new Button("Create Matrix");
@@ -35,7 +40,7 @@ public class MatrixGridExample extends Application {
         gridPane.add(sizeTextField, 1, 0);
         gridPane.add(createButton, 2, 0);
 
-        Scene scene = new Scene(gridPane, 400, 400);
+        Scene scene = new Scene(gridPane, 500, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -51,13 +56,12 @@ public class MatrixGridExample extends Application {
 
         // Додавання міток K1, K2, ..., Kn над стовпцями матриці
         for (int j = 0; j < size; j++) {
-            Label label = new Label("K" + (j+1));
+            Label label = new Label("K" + (j + 1));
             gridPane.add(label, j + 1, 1);
         }
 
-
         for (int i = 0; i < size; i++) {
-            TextField rowNameField = new TextField("Введіть назву команди");
+            TextField rowNameField = new TextField("Введіть назву проекту");
             rowNameFields[i] = rowNameField;
             gridPane.add(rowNameField, 0, i + 2);
 
@@ -78,6 +82,25 @@ public class MatrixGridExample extends Application {
         gridPane.add(resultLabel, 0, size + 3, size + 1, 1);
 
         GridPane.setColumnSpan(resultLabel, size + 1);
+
+        RadioButton radioButton1 = new RadioButton("Minimal cost");
+        RadioButton radioButton2 = new RadioButton("Maximal benefit");
+
+        ToggleGroup toggleGroup = new ToggleGroup();
+        radioButton1.setToggleGroup(toggleGroup);
+        radioButton2.setToggleGroup(toggleGroup);
+
+        // Обробка подій радіокнопок
+        radioButton1.setOnAction(event -> {
+            isMaximalBenefit = false;
+        });
+
+        radioButton2.setOnAction(event -> {
+            isMaximalBenefit = true;
+        });
+
+        gridPane.add(radioButton1, 0, size + 3);
+        gridPane.add(radioButton2, 1, size + 3);
     }
 
     private void processMatrix(int size) {
@@ -99,13 +122,14 @@ public class MatrixGridExample extends Application {
         for (int i = 0; i < size; i++) {
             String rowName = rowNameFields[i].getText();
             result.append(rowName).append(": ");
-            for (int j = 0; j < size; j++) {
-                result.append(matrix[i][j]).append(" ");
-            }
+            result.append(Arrays.deepToString(HungarianMethod.cords(matrix))).append(" ");
             result.append("\n");
         }
-        double minimalCost = HungarianMethod.calculate(matrix);
-        result.append("Minimal cost of hungarian method: ").append(minimalCost);
+
+        double minimalOrMaximal = HungarianMethod.calculate(matrix, isMaximalBenefit);
+
+        result.append("cost of hungarian method: ").append(minimalOrMaximal);
+
         Stage resultStage = new Stage();
         Label resultLabel = new Label(result.toString());
         Scene resultScene = new Scene(resultLabel);
