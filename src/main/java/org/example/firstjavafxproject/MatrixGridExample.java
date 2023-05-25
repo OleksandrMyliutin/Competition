@@ -3,22 +3,20 @@ package org.example.firstjavafxproject;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.example.HungarianMethod;
-
-import java.util.Arrays;
 
 public class MatrixGridExample extends Application {
 
     private TextField[][] textFields;
     private TextField[] rowNameFields;
-    private boolean isMaximalBenefit; // Прапорець для визначення обраного режиму (true - Maximal benefit, false - Minimal cost)
+    private boolean isMaximalBenefit;
 
     @Override
     public void start(Stage primaryStage) {
@@ -33,14 +31,27 @@ public class MatrixGridExample extends Application {
         Button createButton = new Button("Create Matrix");
         createButton.setOnAction(e -> {
             int size = Integer.parseInt(sizeTextField.getText());
-            createMatrix(gridPane, size);
+            if (size >= 2) {
+                createMatrix(gridPane, size);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Недійсний розмір матриці");
+                alert.setContentText("Розмір матриці має бути не менше 2.");
+                alert.showAndWait();
+            }
         });
 
         gridPane.add(sizeLabel, 0, 0);
         gridPane.add(sizeTextField, 1, 0);
         gridPane.add(createButton, 2, 0);
+        Scene scene = new Scene(gridPane, 500, 250);
 
-        Scene scene = new Scene(gridPane, 500, 400);
+        // Встановлення бірюзового фону
+        BackgroundFill backgroundFill = new BackgroundFill(Color.AZURE, CornerRadii.EMPTY, Insets.EMPTY);
+        Background background = new Background(backgroundFill);
+        gridPane.setBackground(background);
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -106,17 +117,39 @@ public class MatrixGridExample extends Application {
 
     private void processMatrix(int size) {
         double[][] matrix = new double[size][size];
+        boolean isMatrixFilled = true;
+
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 String input = textFields[i][j].getText();
+                if (input.isEmpty()) {
+                    isMatrixFilled = false;  // Матриця не повністю заповнена
+                    break;
+                }
                 try {
                     double value = Double.parseDouble(input);
+                    if (value < 0) {
+                        isMatrixFilled = false;  // Значення менше 0 - неприпустиме, матриця не заповнена
+                        break;
+                    }
                     matrix[i][j] = value;
                 } catch (NumberFormatException ex) {
-                    matrix[i][j] = 0.0;
+                    isMatrixFilled = false;  // Недопустиме значення, матриця не заповнена
+                    break;
                 }
             }
         }
+
+        if (!isMatrixFilled) {
+            // Виведення повідомлення про неправильне заповнення матриці
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Invalid Matrix");
+            alert.setContentText("Матриця містить недійсні або порожні значення.");
+            alert.showAndWait();
+            return;
+        }
+
         double[] cords = HungarianMethod.calculateCosts(matrix, isMaximalBenefit);
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < size; i++) {
@@ -136,7 +169,6 @@ public class MatrixGridExample extends Application {
         resultStage.setScene(resultScene);
         resultStage.show();
     }
-
     public static void main(String[] args) {
         launch(args);
     }
