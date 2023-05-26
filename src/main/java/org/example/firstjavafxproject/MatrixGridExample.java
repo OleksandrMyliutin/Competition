@@ -10,7 +10,13 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.example.ElementCoordinates;
 import org.example.HungarianMethod;
+
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Currency;
+import java.util.Locale;
 
 public class MatrixGridExample extends Application {
 
@@ -25,10 +31,10 @@ public class MatrixGridExample extends Application {
         gridPane.setHgap(10);
         gridPane.setVgap(10);
 
-        Label sizeLabel = new Label("Впишіть розмір поля для данних:");
+        Label sizeLabel = new Label("Напишіть кількість проектів та команд:");
         TextField sizeTextField = new TextField();
 
-        Button createButton = new Button("Create Matrix");
+        Button createButton = new Button("Створити матрицю");
         createButton.setOnAction(e -> {
             int size = Integer.parseInt(sizeTextField.getText());
             if (size >= 2) {
@@ -45,7 +51,7 @@ public class MatrixGridExample extends Application {
         gridPane.add(sizeLabel, 0, 0);
         gridPane.add(sizeTextField, 1, 0);
         gridPane.add(createButton, 2, 0);
-        Scene scene = new Scene(gridPane, 500, 250);
+        Scene scene = new Scene(gridPane, 550, 250);
 
         // Встановлення бірюзового фону
         BackgroundFill backgroundFill = new BackgroundFill(Color.AZURE, CornerRadii.EMPTY, Insets.EMPTY);
@@ -59,7 +65,7 @@ public class MatrixGridExample extends Application {
     private void createMatrix(GridPane gridPane, int size) {
         gridPane.getChildren().clear();
 
-        Label nameLabel = new Label("Команада №:");
+        Label nameLabel = new Label();
         gridPane.add(nameLabel, 0, 0, size + 1, 1);
 
         textFields = new TextField[size][size];
@@ -67,7 +73,7 @@ public class MatrixGridExample extends Application {
 
         // Додавання міток K1, K2, ..., Kn над стовпцями матриці
         for (int j = 0; j < size; j++) {
-            Label label = new Label("K" + (j + 1));
+            Label label = new Label("Команда № " + (j + 1));
             gridPane.add(label, j + 1, 1);
         }
 
@@ -78,13 +84,13 @@ public class MatrixGridExample extends Application {
 
             for (int j = 0; j < size; j++) {
                 TextField textField = new TextField();
-                textField.setPrefWidth(50);
+                textField.setPrefWidth(50); // Фіксована ширина поля
                 textFields[i][j] = textField;
                 gridPane.add(textField, j + 1, i + 2);
             }
         }
 
-        Button processButton = new Button("Process");
+        Button processButton = new Button("Розрахувати");
         processButton.setOnAction(e -> processMatrix(size));
 
         gridPane.add(processButton, 0, size + 2);
@@ -94,9 +100,15 @@ public class MatrixGridExample extends Application {
 
         GridPane.setColumnSpan(resultLabel, size + 1);
 
-        RadioButton radioButton1 = new RadioButton("Minimal cost");
+        RadioButton radioButton1 = new RadioButton("Мінімальні витрати (год)");
         radioButton1.fire();
-        RadioButton radioButton2 = new RadioButton("Maximal benefit");
+        String currencyCode = "UAH";
+
+        Currency currency = Currency.getInstance(currencyCode);
+
+        String currencySymbol = currency.getSymbol(Locale.getDefault());
+
+        RadioButton radioButton2 = new RadioButton("Максимальний дохід (" + currencySymbol + ")");
 
         ToggleGroup toggleGroup = new ToggleGroup();
         radioButton1.setToggleGroup(toggleGroup);
@@ -114,7 +126,6 @@ public class MatrixGridExample extends Application {
         gridPane.add(radioButton1, 0, size + 3);
         gridPane.add(radioButton2, 1, size + 3);
     }
-
     private void processMatrix(int size) {
         double[][] matrix = new double[size][size];
         boolean isMatrixFilled = true;
@@ -149,19 +160,39 @@ public class MatrixGridExample extends Application {
             alert.showAndWait();
             return;
         }
-
-        double[] cords = HungarianMethod.calculateCosts(matrix, isMaximalBenefit);
+        ArrayList<ElementCoordinates> cords = new ArrayList<>();
+        try {
+             cords = HungarianMethod.calculateCosts(matrix, isMaximalBenefit);
+        }
+        catch (RuntimeException ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Недійсний розмір матриці");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        }
         StringBuilder result = new StringBuilder();
+        result.append("Для оптимального варіанту повинний бути такий розводіл проектів, де:\n");
         for (int i = 0; i < size; i++) {
             String rowName = rowNameFields[i].getText();
-            result.append(rowName).append(": ");
-            result.append(cords[i]);
+            result.append("Проект ").append(rowName).append(" бере команда №").append(cords.get(i).getJ() + 1).append(";");
             result.append("\n");
         }
 
-        double minimalOrMaximal = HungarianMethod.sumZeroElements(cords);
+        double minimalOrMaximal = HungarianMethod.sumZeroElements(matrix,cords);
 
-        result.append("cost of hungarian method: ").append(minimalOrMaximal);
+        if(isMaximalBenefit) {
+            Currency currency = Currency.getInstance("UAH");
+
+            NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.getDefault());
+            currencyFormatter.setCurrency(currency);
+
+            String formattedAmount = currencyFormatter.format(minimalOrMaximal);
+            result.append("Максимальний дохід при такому розподіленню проектів: ").append(formattedAmount);
+        }
+        else {
+            result.append("Мінімальна кількість годин при такому розподіленню проектів: ").append(minimalOrMaximal + " год");
+        }
 
         Stage resultStage = new Stage();
         Label resultLabel = new Label(result.toString());

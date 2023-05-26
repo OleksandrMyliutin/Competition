@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class HungarianMethod {
 
-    public static double[] calculateCosts(double[][] matrix, boolean isMax){
+    public static ArrayList<ElementCoordinates> calculateCosts(double[][] matrix, boolean isMax){
         if(matrix.length == 0) {
             throw new RuntimeException("Matrix is empty!");
         }
@@ -19,13 +19,7 @@ public class HungarianMethod {
             if(o1.getI() > o2.getI()) return 1;
             return -1;
         });
-        double[] result = new double[coordinates.size()];
-        for (int i = 0; i < coordinates.size(); i++) {
-            int row = coordinates.get(i).getI();
-            int col = coordinates.get(i).getJ();
-            result[i] = startMatrix[row][col];
-        }
-        return result;
+        return coordinates;
     }
 
     private static void decreaseElement(double[][] tempMatrix, boolean isMax)
@@ -95,19 +89,22 @@ public class HungarianMethod {
     private static ArrayList<ElementCoordinates> findFinalZerosIndexes(double[][] matrix)
     {
         var indexes = new ArrayList<ElementCoordinates>();
+        var zeroes = new ArrayList<ElementCoordinates>();
         while(indexes.size() < matrix.length) {
+            zeroes.clear();
             for (int i = 0; i < matrix.length; i++) {
                 int countZeroes = 0;
                 int zeroIndexI = -1;
                 int zeroIndexJ = -1;
                 for (int j = 0; j < matrix[i].length; j++) {
                     if (matrix[i][j] == 0d) {
-                        countZeroes++;zeroIndexI = i;
+                        zeroes.add(new ElementCoordinates(i, j));
+                        countZeroes++;
+                        zeroIndexI = i;
                         zeroIndexJ = j;
                     }
                 }
-                if (countZeroes == 1 && indexes.indexOf(new ElementCoordinates(zeroIndexI, zeroIndexJ)) == -1) {
-                    indexes.add(new ElementCoordinates(zeroIndexI, zeroIndexJ));
+                if (countZeroes == 1 && indexes.indexOf(new ElementCoordinates(zeroIndexI, zeroIndexJ)) == -1) {indexes.add(new ElementCoordinates(zeroIndexI, zeroIndexJ));
                     for (int k = 0; k < matrix.length; k++) {
                         if (matrix[k][zeroIndexJ] == 0d && k != zeroIndexI) {
                             matrix[k][zeroIndexJ] = Integer.MAX_VALUE;
@@ -115,16 +112,31 @@ public class HungarianMethod {
                     }
                 }
             }
+            if(zeroes.size() < matrix.length)
+            {
+                throw new RuntimeException("Ця матриця не може мати оптимільні рішенн для кожного проекту!");
+            }
         }
         return indexes;
     }
-    public static double sumZeroElements(double[] cords)
+    public static double sumZeroElements(double[][] matrix, ArrayList<ElementCoordinates> cords)
     {
         double sum = 0;
-        for (var itemCoordinates: cords) {
+        double[] desipher = desipher(matrix, cords);
+        for (var itemCoordinates: desipher) {
             sum += itemCoordinates;
         }
         return sum;
+    }
+    private static double[] desipher(double[][] matrix, ArrayList<ElementCoordinates> cords)
+    {
+        double[] result = new double[cords.size()];
+        for (int i = 0; i < cords.size(); i++) {
+            int row = cords.get(i).getI();
+            int col = cords.get(i).getJ();
+            result[i] = matrix[row][col];
+        }
+        return result;
     }
     private static double[][] copy2DArray(double[][] source)
     {
